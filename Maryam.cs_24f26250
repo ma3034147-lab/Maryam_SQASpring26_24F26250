@@ -1,0 +1,39 @@
+using System;
+
+public class CropAnalysisSystem
+{
+  public string CalculateCropProductivity(double harvestWeight, double farmArea)
+    {
+    if (harvestWeight <= 0 || farmArea <= 0) 
+        {
+            return "Invalid Input"; 
+        }
+    double yield = harvestWeight / farmArea;
+        int yieldCategoryKey;
+
+        if (yield >= 2500) 
+        {
+          yieldCategoryKey = 1; // High
+        }
+        else if (yield >= 1000) 
+        {
+          yieldCategoryKey = 2; // Medium
+        }
+        else 
+        {
+            yieldCategoryKey = 3; // Low
+        }
+
+    switch (yieldCategoryKey)
+        {
+            case 1:
+                return "High Yield Production";
+            case 2:
+                return "Medium Yield Production";
+            case 3:
+                return "Low Yield Production";
+            default:
+                return "Unknown";
+        }
+    }
+}
