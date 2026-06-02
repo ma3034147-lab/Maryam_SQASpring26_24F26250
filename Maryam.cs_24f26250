@@ -26,14 +26,12 @@ public class CropAnalysisSystem
 
     switch (yieldCategoryKey)
         {
-            case 1:
-                return "High Yield Production";
-            case 2:
-                return "Medium Yield Production";
-            case 3:
-                return "Low Yield Production";
-            default:
-                return "Unknown";
-        }
-    }
+      case 1:
+        return "Category A: High Yield Production (Optimal)";
+    case 2:
+        return "Category B: Medium Yield Production (Standard)";
+    case 3:
+        return "Category C: Low Yield Production (Sub-optimal)";
+    default:
+        return "System Error: Unknown Yield Classification";
 }
