@@ -4,10 +4,10 @@ public class CropAnalysisSystem
 {
   public string CalculateCropProductivity(double harvestWeight, double farmArea)
     {
-    if (harvestWeight <= 0 || farmArea <= 0) 
-        {
-            return "Invalid Input"; 
-        }
+   if (harvestWeight <= 0 || farmArea <= 0) 
+{
+    return "Error: Harvest weight and farm area must be greater than zero."; 
+}
     double yield = harvestWeight / farmArea;
         int yieldCategoryKey;
 
